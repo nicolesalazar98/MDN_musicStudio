@@ -1,0 +1,41 @@
+.music-list-container {
+  display: inline-block;
+  width: 100%;
+  height: 13rem;
+  border: 2px white solid;
+  margin-top: 0.5rem;
+}
+
+.music-list-container h1 {
+  color: white;
+}
+
+.song-list {
+  display: inline-block;
+  height: 85%;
+  width: 100%;
+  overflow-y: auto;
+}
+
+.song {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px 10px;
+  cursor: pointer;
+}
+
+.song strong {
+  display: flex;
+  flex: 2;
+  /* see more https://quirksmode.org/css/user-interface/textoverflow.html */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: clip;
+}
+
+.song i {
+  display: flex;
+  flex: 0.6;
+  justify-content: center;
+}
