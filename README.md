@@ -5,7 +5,7 @@ Diseño e implementación de un reproductor de música local, centrado en la rep
 
 Funcionalidades:
 
-1. Inicio de sesión: Se implementa un sistema de inicio de sesión que requiera el ingreso de usuario, correo y contraseña para acceder al reproductor de música.
+1. Inicio de sesión: Se implementa un sistema de inicio de sesión que requiera el ingreso de usuario y contraseña para acceder al reproductor de música. ● Se registro dos usuarios con sus respectivas contraseñas. [(username1: naruto ; password1: naruto) (username2: dragonball ; password1: dragonball)]
 2. Sistema de búsqueda: Permite la búsqueda de canciones mediante nombre de la canción, nombre del artista y género.
 3. Datos de las canciones: Muestra información detallada de cada canción, incluyendo nombre, artista, año, duración, género y carátula.
 4. Funcionalidades de reproducción:
