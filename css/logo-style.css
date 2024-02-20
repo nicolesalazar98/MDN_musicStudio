@@ -107,7 +107,14 @@ form {
 
     }
 
-
+    .go-back-link {
+        color: var(--primary-color); 
+        text-decoration: none; 
+    }
+    
+    .go-back-icon {
+        color: var(--primary-color); 
+    }
 
 
 

@@ -4,7 +4,8 @@ window.onload = () => {
 };
 let audioMp3;
 let selectedSong;
-// la clase constructora ya tiene definido los parametros de entrada
+
+// la clase constructora ya tiene definido los parámetros de entrada
 class Song {
   constructor(id, title, artist, duration, album, year, gender, urlSong, cover) {
     this.id = id;
@@ -18,14 +19,14 @@ class Song {
     this.cover = cover;
   }
 }
+
 // en la variable SONGS instanciamos 2 objetos de prueba con los valores necesarios
-// no es necesario definir nuevamente los atributos, va solo los valores en el constructor
 const SONGS = [
   new Song(
     '1',
     'Take On Me',
     'a-ha',
-    '3:45',
+    null,
     'Hunting High and Low',
     1985,
     'Synth pop, New wave',
@@ -36,7 +37,7 @@ const SONGS = [
     '2',
     'Azul',
     'Zoe',
-    '3:20',
+    null,
     'Aztlan',
     2018,
     'Alternativa',
@@ -47,7 +48,7 @@ const SONGS = [
     '3',
     'Kahalid-Lovely',
     'Billie Eilish',
-    '3:20',
+    null,
     '13 Reasons Why-2s',
     2018,
     'Pop',
@@ -58,7 +59,7 @@ const SONGS = [
     '4',
     'Cant Get You out of My Head (Cover)',
     'AnnenMayKantereit x Parcels',
-    '3:36',
+    null,
     'Remix',
     2019,
     'Indie-rock',
@@ -69,7 +70,7 @@ const SONGS = [
     '5',
     'De la noche a la mañana',
     'Elefante',
-    '4:19',
+    null,
     'El que busca encuentra',
     2012,
     'Funk, Electropop',
@@ -80,7 +81,7 @@ const SONGS = [
     '6',
     'Boyfriend',
     'Dove Cameron',
-    '2:34',
+    null,
     'Boyfriend',
     2022,
     'Indie-rock',
@@ -91,7 +92,7 @@ const SONGS = [
     '7',
     'EME',
     'Bardo José, Miel',
-    '3:11',
+    null,
     'EME',
     2021,
     'Dance-electro',
@@ -102,7 +103,7 @@ const SONGS = [
     '8',
     'Somebody That I Used To Know (feat. Kimbra)',
     'Gotye',
-    '4:07',
+    null,
     'Making Mirrors',
     2011,
     'Indie-rock',
@@ -113,7 +114,7 @@ const SONGS = [
     '9',
     'Super Lady',
     'GI-DLE',
-    '2:32',
+    null,
     'two',
     2024,
     'K-pop',
@@ -124,7 +125,7 @@ const SONGS = [
     '10',
     'Hasta la raiz',
     'Natalia Fourcade',
-    '3:42',
+    null,
     'Hasta la raíz',
     2019,
     'Indie-rock',
@@ -135,7 +136,7 @@ const SONGS = [
     '11',
     'I hate you I love you',
     'Gnash',
-    '3:46',
+    null,
     'I hate you I love you',
     2016,
     'Dance/Electrónica',
@@ -146,7 +147,7 @@ const SONGS = [
     '12',
     'IU(아이유)',
     'eight(에잇)',
-    '2:47',
+    null,
     'eight',
     2020,
     'Indie-rock',
@@ -157,7 +158,7 @@ const SONGS = [
     '13',
     'Love Dive',
     'IVE 아이브',
-    '2:57',
+    null,
     'Wave',
     2021,
     'K-Pop ',
@@ -168,7 +169,7 @@ const SONGS = [
     '14',
     'Peaches',
     'Jack Black',
-    '1:35',
+    null,
     'Super Mario Movie',
     2022,
     'Pop',
@@ -179,7 +180,7 @@ const SONGS = [
     '15',
     'Mi traicionero amor',
     'Jarawi',
-    '4:14',
+    null,
     'Mi traicionero amor',
     2023,
     'folklore',
@@ -190,7 +191,7 @@ const SONGS = [
     '16',
     'Todos tenemos un amor',
     'La mosca Tse-Tse',
-    '4:23',
+    null,
     'Buenos muchachos',
     2001,
     'Rock en español',
@@ -201,7 +202,7 @@ const SONGS = [
     '17',
     'Lo malo de ser bueno',
     'Cuarteto de nos',
-    '4:02',
+    null,
     'Porfiado',
     2012,
     'Rock en español',
@@ -212,7 +213,7 @@ const SONGS = [
     '18',
     'Lost on you',
     'LP',
-    '4:26',
+    null,
     'Lost on You',
     2016,
     'Indie rock',
@@ -223,7 +224,7 @@ const SONGS = [
     '19',
     'Starry Night',
     'MAMAMOO(마마무)',
-    '3:32',
+    null,
     'Yellow Flower',
     2018,
     'k-Pop',
@@ -234,7 +235,7 @@ const SONGS = [
     '20',
     'While Your Lips Are Still Red',
     'Nightwish',
-    '4:16',
+    null,
     'While Your Lips Are Still Red',
     2007,
     'Heavy metal',
@@ -245,7 +246,7 @@ const SONGS = [
     '21',
     'Payphone',
     'Maroon 5',
-    '3:52',
+    null,
     'Overexposed',
     2013,
     'Pop',
@@ -256,7 +257,7 @@ const SONGS = [
     '22',
     'Photograph',
     'Ed Sheeran ',
-    '4:19',
+    null,
     'X',
     2018,
     'Flok-Pop',
@@ -267,7 +268,7 @@ const SONGS = [
     '23',
     'Reflexiones',
     'Esto es eso ',
-    '3:45',
+    null,
     'Ecuafornia',
     2020,
     'Tropipop',
@@ -278,7 +279,7 @@ const SONGS = [
     '24',
     'Lonely Day',
     'System Of A Down ',
-    '2:47',
+    null,
     'Hypnotize',
     2005,
     'Metal alternativo',
@@ -289,7 +290,7 @@ const SONGS = [
     '25',
     'INVU',
     'TAEYEON 태연 ',
-    '3:25',
+    null,
     'INVU',
     2018,
     'k-Pop',
@@ -300,7 +301,7 @@ const SONGS = [
     '26',
     'In Hell I ll Be In Good Company',
     'The Dead South ',
-    '4:05',
+    null,
     'Good Company',
     2015,
     'Folk',
@@ -311,7 +312,7 @@ const SONGS = [
     '27',
     'Tu falta de querer ',
     'Mon Laferte ',
-    '4:38',
+    null,
     'Mon Laferte vol. 1',
     2015,
     'Pop rock',
@@ -322,7 +323,7 @@ const SONGS = [
     '28',
     'Inside Out',
     'Zedd, Griff',
-    '3:06',
+    null,
     'Inside Out',
     2019,
     'Pop',
@@ -333,7 +334,7 @@ const SONGS = [
     '29',
     'Cuando sea grande',
     'Cuarteto de nos',
-    '4:12',
+    null,
     'Porfiado',
     2012,
     'Rock en español',
@@ -346,7 +347,7 @@ const SONGS = [
     '30',
     'Reality',
     'Lost Frequencies',
-    '4:30',
+    null,
     '538 Hitzone 75',
     2015,
     'Pop',
@@ -355,9 +356,9 @@ const SONGS = [
   ),
 ];
 
-const MAIN_SONG_ICONS = ['fa fa-play-circle', 'fa fa-heart', 'fa fa-solid fa-plus'];
-const MAIN_PLAYLIST_ICONS = ['fa fa-play-circle', 'fa fa-heart', 'fa fa-solid fa-minus'];
-const MAIN_FAVORITOS_ICONS = ['fa fa-play-circle', 'fa fa-heart-o', 'fa fa-solid fa-plus'];
+const MAIN_SONG_ICONS = ['fa fa-play-circle', 'fa fa-heart-o', 'fa fa-solid fa-plus'];
+const MAIN_PLAYLIST_ICONS = ['fa fa-play-circle', 'fa fa-heart-o', 'fa fa-solid fa-minus'];
+const MAIN_FAVORITOS_ICONS = ['fa fa-play-circle', 'fa fa-heart', 'fa fa-solid fa-plus'];
 
 // leer todas las canciones
 function loadSongs(songList) {
@@ -366,47 +367,57 @@ function loadSongs(songList) {
   // borrar el contenido anterior
   list.innerHTML = null;
   songList.forEach((song) => {
-    // crear elemento li para cada cancion
+    // crear elemento li para cada canción
     const songElement = document.createElement('li');
     songElement.className = 'song';
-    // crear elemento strong para el titulo de la cancion y agregarlo al li
+    // crear elemento strong para el título de la canción y agregarlo al li
     const songTitle = document.createElement('strong');
     songTitle.innerHTML = song.title;
     songElement.appendChild(songTitle);
-    // crear elemento button para el boton de reproduccion y agregarlo al li
+
+   
+
+    // crear elemento button para el boton de reproducción y agregarlo al li
     MAIN_SONG_ICONS.forEach((iconClass) => {
       const icon = document.createElement('i');
       icon.id = song.id;
       icon.className = iconClass;
-      // agregar evento
+
+      //agregar evento 
       icon.addEventListener('click', () => handleIconClick(song, iconClass));
-      // agregar icono al li
+        // agregar icono al li
       songElement.appendChild(icon);
     });
+
     // agregar li al ul principal de canciones
     list.appendChild(songElement);
   });
 }
 
-// tocar cancion
+// tocar canción
 function playSongSelected(song) {
   selectedSong = song;
-  // validar si existe una reproduccion
+  // validar si existe una reproducción
   if (audioMp3) {
     audioMp3.pause();
     audioMp3.currentTime = 0;
   }
   audioMp3 = new Audio(song.urlSong);
-  // preguntar q mostrar tiempo transcurrido o tiempo total de la cancion
-  // audioMp3.addEventListener('loadedmetadata', function () {
-  //   // Obtener la duración de la canción
-  //   song.currentTime = audioMp3.duration;//currentTime
-  // });
-  song.currentTime = audioMp3.duration;
+
+ // Escuchar el evento loadedmetadata para obtener la duración de la canción
+ audioMp3.addEventListener('loadedmetadata', function() {
+  songDuration.innerHTML = '' + formatTime(audioMp3.duration);
+});
+
+  // Escuchar el evento timeupdate para actualizar el tiempo actual de reproducción
+  audioMp3.addEventListener('timeupdate', function() {
+    currentTime.innerHTML = 'Tiempo actual: ' + formatTime(audioMp3.currentTime);
+  });
+
   audioMp3.volume = 0.5;
   audioMp3.play();
-  // mostrar informacion cancion
-  // seccion cover
+  // mostrar informacion canción
+  // sección cover
   const imgAlbum = document.getElementById('imgAlbum');
   imgAlbum.src = song.cover;
   const reaccion = document.getElementById('reaccion');
@@ -417,34 +428,44 @@ function playSongSelected(song) {
   songYear.innerHTML = song.year;
   const songGender = document.getElementById('songGender');
   songGender.innerHTML = song.gender;
-  // seccion botones inferior
+  // sección botones inferior
   const idSong = document.getElementById('idSong');
   idSong.innerHTML = song.id;
   const artist = document.getElementById('artist');
   artist.innerHTML = song.artist;
   const actualSong = document.getElementById('song');
   actualSong.innerHTML = song.title;
+  const songTimeInfo = document.getElementById('songTimeInfo');
   const songDuration = document.getElementById('songDuration');
-  songDuration.innerHTML = song.duration;
+  songDuration.innerHTML = '' + formatTime(audioMp3.duration); 
 
-  // const currentTime = document.getElementById('currentTime');
-  // currentTime.innerHTML = song.currentTime;
+  // Escuchar el evento timeupdate para actualizar el tiempo actual de reproducción
+ audioMp3.addEventListener('timeupdate', function() {
+   songTimeInfo.innerHTML = '' + formatTime(audioMp3.currentTime);
+ });
 }
 
-// evento que se llama desde la seccion canciones
+// Función para formatear el tiempo en formato de minutos:segundos
+function formatTime(seconds) {
+  let minutes = Math.floor(seconds / 60);
+  let remainingSeconds = Math.floor(seconds % 60);
+  return minutes + ':' + (remainingSeconds < 10 ? '0' : '') + remainingSeconds;
+}
+
+// Evento que se llama desde la sección canciones
 function handleIconClick(song, iconClass) {
   if (iconClass === 'fa fa-play-circle') {
     playSongSelected(song);
-  } else if (iconClass === 'fa fa-heart') {
+  } else if (iconClass === 'fa fa-heart-o') { 
     const list = document.getElementById('my_favorites');
-    // agregar a favoritos si no existe la cancion en la lista
+    // agregar a favoritos si no existe la canción en la lista
     let existeCancion = Array.from(list.children).find((child) => child.id === song.id);
     if (!existeCancion) {
       agregarAFavoritos(song, list);
     }
   } else {
     const list = document.getElementById('my_playlist');
-    // agregar al playlista si no existe la cancion en la lista
+    // agregar al playlista si no existe la canción en la lista
     let existeCancion = Array.from(list.children).find((child) => child.id === song.id);
     if (!existeCancion) {
       agregarAPlayList(song, list);
@@ -494,13 +515,13 @@ function agregarAFavoritos(song, listElement) {
   listElement.appendChild(songElement);
 }
 
-// evento que se llama desde la seccion playlist
+// evento que se llama desde la sección playlist
 function handleIconPlayListClick(song, iconClass) {
   if (iconClass === 'fa fa-play-circle') {
     playSongSelected(song);
-  } else if (iconClass === 'fa fa-heart') {
+  } else if (iconClass === 'fa fa-heart-o') { 
     const list = document.getElementById('my_favorites');
-    // agregar a favoritos si no existe la cancion en la lista
+    // agregar a favoritos si no existe la canción en la lista
     let existeCancion = Array.from(list.children).find((child) => child.id === song.id);
     if (!existeCancion) {
       agregarAFavoritos(song, list);
@@ -510,27 +531,27 @@ function handleIconPlayListClick(song, iconClass) {
     // eliminar del playlist
     let existeCancion = Array.from(list.children).find((child) => child.id === song.id);
     if (existeCancion) {
-      // eliminar de la lista la cancion
+      // eliminar de la lista la canción
       list.removeChild(existeCancion);
     }
   }
 }
 
-// evento que se llama desde la seccion favoritos
+// evento que se llama desde la sección favoritos
 function handleIconFavoriteClick(song, iconClass) {
   if (iconClass === 'fa fa-play-circle') {
     playSongSelected(song);
-  } else if (iconClass === 'fa fa-heart-o') {
+  } else if (iconClass === 'fa fa-heart') { 
     const list = document.getElementById('my_favorites');
     // eliminar de favoritos
     let existeCancion = Array.from(list.children).find((child) => child.id === song.id);
     if (existeCancion) {
-      // eliminar de la lista la cancion
+      // eliminar de la lista la canción
       list.removeChild(existeCancion);
     }
   } else {
     const list = document.getElementById('my_playlist');
-    // agregar al playlista si no existe la cancion en la lista
+    // agregar al playlista si no existe la canción en la lista
     let existeCancion = Array.from(list.children).find((child) => child.id === song.id);
     if (!existeCancion) {
       agregarAPlayList(song, list);
@@ -538,7 +559,7 @@ function handleIconFavoriteClick(song, iconClass) {
   }
 }
 
-// agregar a favoritos desde la seccion informacion
+// agregar a favoritos desde la seccion información
 function agregarAFavoritosDesdeInformacion() {
   if (selectedSong) {
     const list = document.getElementById('my_favorites');
@@ -614,11 +635,10 @@ previewBtn.addEventListener('click', () => {
     if (index !== -1) {
       let indexTemp;
       if (index === 0) {
-        indexTemp = SONGS.length - 1; // obtiene la ultima posicion del arreglo
+        indexTemp = SONGS.length - 1; 
       } else {
         indexTemp = index - 1;
       }
-      // index === 0 ? SONGS.length - 1 : index - 1;
       prevNextSongSelected(indexTemp);
     }
   }
@@ -644,30 +664,10 @@ searchBtn.addEventListener('click', () => {
     loadSongs(SONGS);
     return;
   }
-  // Filtrar las canciones con el criterio de busqueda (nombre de cancion y nombre de artista)
+  // Filtrar las canciones con el criterio de busqueda (nombre de canción y nombre de artista)
   const filteredSongs = SONGS.filter(
     (song) => song.title.toLowerCase().includes(searchQuery) || song.artist.toLowerCase().includes(searchQuery) || song.gender.toLowerCase().includes(searchQuery)
   );
   // Aparezcan las canciones filtradas
   loadSongs(filteredSongs);
 });
-
-
-// duracion de la cancion 
-
-// audioMp3.addEventListener("timeupdate", function () {
-//   const currentTime = audioMp3.currentTime;
-//   const duration = audioMp3.duration;
-
-//   seekBar.value = (currentTime / duration) * 100;
-  
-// });
-
-
-
-// function showSongDuration(i) {
-//   const songs = SONGS[i];
-//   const durationSs = cancion.duration;
-//   console.log("La duración de la canción es: " + durationSs);
-// }
-// showSongDuration(0); // Muestra la duración de la primera canción

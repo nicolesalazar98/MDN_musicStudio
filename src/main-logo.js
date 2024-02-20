@@ -28,10 +28,6 @@ loginBtn.addEventListener('click', (e) => {
 
     const usernameValue = username.value
     const passwordValue = password.value
-    // const data = {
-    //     username: username.value,
-    //     password: password.value
-    // }
 
     const correctData = users.find((correctData) => 
     correctData.username == usernameValue && correctData.password == passwordValue)
@@ -48,8 +44,8 @@ if (localStorage.getItem('isLogged')) {
     const login = document.getElementById('login')
     login.innerHTML = 
     `<button id='logout'>Logout<button>
-    <a href = '../index.html'>
-    <i class="bi bi-arrow-left"></i>Go back</a>`
+    <a class="go-back-link" href = '../index.html'>
+    <i class="bi bi-arrow-left go-back-icon"></i>Go back</a>`
 
     const logout = document.getElementById('logout')
     logout.addEventListener('click', () => {

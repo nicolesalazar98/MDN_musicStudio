@@ -23,15 +23,15 @@
     <aside class="menu-aside">
 
       <div class="logo">
-        <span class="i-logo i-logo2"><i class=""></i> Studio MDN</span>
-        <img id="imgPortada" src="./assets/principlesImages/play.png" width="50" height="50" />
+        <span class="i-logo i-logo2"><i class=""></i>MDN studio</span>
+        <img id="imgPortada" src="./assets/principlesImages/play.png" width="42" height="42" />
       </div>
       <div class="buscador">
-        <input id="searchbar" type="text" placeholder="Buscar" />
-        <button id="searchBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
+        <input id="searchbar" type="text" placeholder="What do you want to listen?" />
+        <button id="searchBtn"><i class="bi bi-search"></i></button>
       </div>
       <div class="music-list-container">
-        <h1>Resultado de busqueda</h1>
+        <h1>My Library</h1>
         <ul class="song-list" id="main_song_list"></ul>
       </div>
       <div class="music-list-container">
@@ -39,48 +39,20 @@
         <ul class="song-list" id="my_playlist"></ul>
       </div>
       <div class="music-list-container">
-        <h1>Favoritos</h1>
+        <h1>My Favorite Songs</h1>
         <ul class="song-list" id="my_favorites"></ul>
       </div>
     </aside>
 
     <div class="album" id="album">
       <div class="user">
-        <a href="#" ></a>
-        <!-- <a href="./pages/index-logo.html"><i class="fa-solid fa-circle-user"></i></a> -->
+        <a href="#"></a>
         <a class="log" href="./pages/index-logo.html"><i class="fas fa-user "></i></a>
-          <!-- <span class="user">  <i class="fas fa-user "></i> </a></span>       -->
       </div>
 
-
-    <!-- <div class="album" id="album">
-      <div class="user">
-        
-        <div>
-          <a href="./pages/index-logo.html"><i class="fa-solid fa-circle-user"></i></a>
-        </div>
-       
-      </div> -->
-
-      <!-- <div class="album" id="album">
-        <div class="user">
-          <button type="button">
-            <i class="fas fa-user"></i> Click aquí
-        </button>
-          <i class="fa-solid fa-circle-user"></i>
-        </div> -->
-
-      <!-- <div class="album" id="album">
-            <div class="user">
-                <a href="#" class="close" id="close"><i class="far fa-times-circle"></i></a>
-                <span class="user-desc">  <i class="fas fa-user "></i>Autenticado </a></span>      
-            </div> -->
-
-      <!-- <div class="animate">      
-            </div> -->
       <div class="album-description">
         <div class="album-img">
-          <img id="imgAlbum" src="./assets/principlesImages/generalCover.jpeg" width="650" height="400" />
+          <img id="imgAlbum" src="./assets/principlesImages/generalCover.jpeg" width="600" height="400" />
         </div>
         <div class="album-text">
           <div class="title">
@@ -89,11 +61,7 @@
             <h2 id="songGender"></h2>
           </div>
 
-          <!-- <div class="description">
-                            <p id="playDescription">Reproduzca la playlist de su agrado !!!</p>
-                        </div> -->
           <div class="acciones">
-            <!-- <input type="file" id="files" name="files[]" multiple /> -->
             <a href="#" class="btn reaccion-inactiva" id="reaccion" style="display: none;"
               onclick="agregarAFavoritosDesdeInformacion()"><i class="fas fa-heart"></i></a>
           </div>
@@ -103,10 +71,10 @@
       <div class="album-list-music">
         <ul class="list-music" id="lista-music">
           <li class="music">
-            <!-- <a href="#" id="play2" class="btn play-music" style="display: none;"><i class="far fa-play-circle"></i></a> -->
             <h3 id="idSong"></h3>
             <h3 id="artist"></h3>
             <h3 class="name" id="song"></h3>
+            <h3 class="time" id="songTimeInfo"></h3>
             <h3 class="time" id="songDuration"></h3>
           </li>
         </ul>
@@ -123,11 +91,6 @@
       <a href="#" id="stop" class="btn control pausa"><i class="fa fa-solid fa-stop"></i></a>
       <a href="#" id="mute" class="btn control"><i class="fa fa-solid fa-volume-off"></i></a>
       <a href="#" id="sound" class="btn control"><i class="fas fa-volume-up"></i></a>
-      <!-- <div class="volumen">
-                    <a href="#" class="subir"></a>
-                    <a href="#" class="bajar"></a>
-
-                </div> -->
     </div>
   </div>
 
