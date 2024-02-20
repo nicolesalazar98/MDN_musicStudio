@@ -19,12 +19,12 @@ Funcionalidades:
 
 Trabajo realizado por:
 
-Nicole Matilda Salazar Jara
+M- Nicole Matilda Salazar Jara
 matilda.salazar98@gmail.com
 
-Dominique Melina Báez Mera
+D- Dominique Melina Báez Mera
 baez.dominique@gmail.com
 
-Nancy Evelyn Vasquez Hernandez
+N- Nancy Evelyn Vasquez Hernandez
 nancyvsqz8@gmail.com
 
